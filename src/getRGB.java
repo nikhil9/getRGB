@@ -18,7 +18,7 @@ public class getRGB{
 	
 	public static void main (String[] args){
 		
-		final IplImage src = cvLoadImage("resources/test.png");
+		final IplImage src = cvLoadImage("resources/test.png"); //Images 'test.png' located under resource folder
 		cvNamedWindow("Image",CV_WINDOW_AUTOSIZE);			    
 	    
 	    CvMouseCallback on_mouse = new CvMouseCallback() {
@@ -30,7 +30,7 @@ public class getRGB{
             		y_co = y;
             	}
             	CvScalar s=cvGet2D(src,y_co,x_co);                
-                System.out.println( "B:"+ s.val(0) + " G:" + s.val(1) + " R:" + s.val(2));
+                System.out.println( "B:"+ s.val(0) + " G:" + s.val(1) + " R:" + s.val(2));//Print values
             }
         };
         
